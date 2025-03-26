@@ -38,7 +38,8 @@ class CarGurusCa:
 
 if __name__ == "__main__":
     cls_cargurus = CarGurusCa()
-    for pg_number in range(1, 300):
+    for pg_number in range(300, 436):
+      print(f"pg_number: {pg_number}")
       name_json_file = rf"data/cargurus-pg-{pg_number}_{datetime.now().strftime('%Y%m%d%H%M%S')}.json"
       json_cargurus = cls_cargurus.get_infos_mode_1(pg_number)
       blame_json = JsonFiles().dump_message(json_cargurus, name_json_file)
